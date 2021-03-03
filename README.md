@@ -90,4 +90,5 @@ In order to run our examples you need the following:
  
 <h1>Table of contents</h1>
 
-  - [An-executable-and-libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A hello world example.
+  - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same folder.
+  - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). Project with subdirectories, each with individual CMakeList.txt file.
