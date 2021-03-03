@@ -1,9 +1,0 @@
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/CMakeFiles/rebuild_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/CMakeFiles/edit_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/CMakeFiles/project.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/complex/CMakeFiles/rebuild_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/complex/CMakeFiles/edit_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/complex/CMakeFiles/complex.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/vector/CMakeFiles/rebuild_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/vector/CMakeFiles/edit_cache.dir
-/home/adam/Documents/Programming/Cmake/src/Subdirectories/build/vector/CMakeFiles/vector.dir
