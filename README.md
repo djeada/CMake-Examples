@@ -90,4 +90,4 @@ In order to run our examples you need the following:
  
 <h1>Table of contents</h1>
 
-  - link:An-executable-and-libraries[src/ExecutableAndLibraries]. A hello world example.
+  - link:An-executable-and-libraries[src/ExecutableAndLibraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A hello world example.
