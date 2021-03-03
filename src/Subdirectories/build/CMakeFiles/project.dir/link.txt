@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/project.dir/main.cpp.o -o project  complex/libcomplex.a vector/libvector.a 

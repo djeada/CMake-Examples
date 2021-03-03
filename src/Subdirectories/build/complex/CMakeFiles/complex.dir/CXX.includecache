@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../complex/include/complex.h
+iostream
+-
+
+/home/adam/Documents/Programming/Cmake/src/Subdirectories/complex/src/complex.cpp
+cmath
+-
+complex.h
+/home/adam/Documents/Programming/Cmake/src/Subdirectories/complex/src/complex.h
+
