@@ -24,7 +24,7 @@ You have now an executable that you can run, called <i>exe</i>.
 When working with many files, it becomes nearly impossible to use command line commands for compilation.
 Instead you can use configuration files in which you specify which files and with which flags you want to compile.
 
-```bash
+```make
 CC=gcc
 CFLAGS=-I.
 DEPS = code.h
