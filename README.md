@@ -83,6 +83,7 @@ You can use CMake to generate Makefiles, but it can also work with Ninja, KDEvel
 <h1>CMake language</h1>
 
 <h2>Variables</h2>
+
 ```CMake
 set(TEXT "Hello World!")
 set(NUMBER 10)
