@@ -122,7 +122,6 @@ set(TEXT "Python boss.")
 message("Text: ${TEXT}")
 
 string(APPEND TEXT " and not cpp.")
-string(PREPEND TEXT "Java master. ")
 string(REPLACE "Python" "C" NEW_TEXT ${TEXT} )
 string(TOLOWER ${TEXT} NEW_TEXT)
 string(TOUPPER ${TEXT} NEW_TEXT)
