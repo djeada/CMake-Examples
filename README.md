@@ -80,6 +80,57 @@ Make is a build system.
 CMake is a build system generator.
 You can use CMake to generate Makefiles, but it can also work with Ninja, KDEvelop and Xcode projects, as well as Visual Studio solutions
 
+<h1>CMake language</h1>
+
+<h2>Variables</h2>
+```CMake
+set(TEXT "Hello World!")
+set(NUMBER 10)
+
+message("Your text: ${TEXT} Your number: ${NUMBER}")
+```
+
+<h2>Lists</h2>
+
+Indexed like in every other language: 0...n-1
+
+Negative indexes are counted from the end.
+
+```CMake
+set(LIST xx yy zz)
+set(LIST2 1 2 3)
+
+message("First list: ${LIST} Second list: ${LIST2}")
+
+list(REMOVE_AT LIST 2)
+list(REMOVE_ITEM LIST xx)
+list(INSERT LIST 1 gg)
+list(APPEND LIST dd)
+list(REVERSE LIST)
+list(REMOVE_DUPLICATES LIST)
+list(SORT LIST)
+
+message("First list: ${LIST} Second list: ${LIST2}")
+```
+
+<h2>Strings</h2>
+
+```CMake
+set(TEXT "Python boss.")
+
+message("Text: ${TEXT}")
+
+string(APPEND TEXT " and not cpp.")
+string(PREPEND TEXT "Java master. ")
+string(REPLACE "Python" "C" NEW_TEXT ${TEXT} )
+string(TOLOWER ${TEXT} NEW_TEXT)
+string(TOUPPER ${TEXT} NEW_TEXT)
+string(COMPARE EQUAL ${NEW_TEXT} "XXX"  flag)
+string(COMPARE GREATER ${NEW_TEXT} ${TEXT}  flag)
+
+message("Text: ${TEXT}")
+```
+
 <h1>Requirements</h1>
  
 In order to run our examples you need the following:
@@ -87,7 +138,7 @@ In order to run our examples you need the following:
 * CMake v3.15+
 * gcc
 * make
- 
+
 <h1>Table of contents</h1>
 
   - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same folder.
