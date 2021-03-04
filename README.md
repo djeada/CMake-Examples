@@ -131,6 +131,25 @@ string(COMPARE GREATER ${NEW_TEXT} ${TEXT}  flag)
 message("Text: ${TEXT}")
 ```
 
+<h2>Conditionals</h2>
+
+```CMake
+set(FLAG ON)
+
+if(${FLAG})
+	message("You can see this message.")
+else()
+	message("You will never see that message.")
+endif()
+```
+
+<h2>Loops</h2>
+
+```CMake
+ foreach(LETTER a b c)
+ 	message(${LETTER})
+```
+
 <h1>Requirements</h1>
  
 In order to run our examples you need the following:
