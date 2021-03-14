@@ -187,3 +187,4 @@ In order to run our examples you need the following:
 
   - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same folder.
   - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). Project with subdirectories, each with individual CMakeList.txt file.
+  - [Exporting and using packages](https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages). Export your library as a package and then use it in a completely unrelated project.
