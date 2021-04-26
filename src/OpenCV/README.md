@@ -1,5 +1,11 @@
 # Open-CV
 
+Build a program that uses OpenCV library to read an image, write some text to the image and save it.
+
+<h2>Requirements</h2>
+
+To install OpenCV on Debian follow the commands:
+
 ```bash
 sudo apt update && sudo apt install -y cmake g++ wget unzip
 wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip
