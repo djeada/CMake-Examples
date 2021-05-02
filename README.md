@@ -11,7 +11,7 @@ CMake is:
 
 <h2>Compilation with gcc</h2>
 
-When your project contains just three files (main.c code.c code.h), you can easily compily it from the terminal using following commands:
+When your project contains just three files (main.c code.c code.h), you can easily compile it from the terminal using following commands:
 
 ```bash
 gcc -Wall -Wextra -Werror -std=c99 -pedantic -g -o exe code.c main.c
