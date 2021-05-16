@@ -21,8 +21,8 @@ You have now an executable that you can run, called <i>exe</i>.
 
 <h2>Using Makefiles for compilation</h2>
 
-When working with many files, it becomes nearly impossible to use command line commands for compilation.
-Instead you can use configuration files in which you specify which files and with which flags you want to compile.
+When dealing with a large number of files, using command line commands for compilation becomes almost impossible.
+Instead, you can use configuration files to define which files to compile and with which flags.
 
 Example of Makefile for our project with three files (main.c code.c code.h):
 
@@ -38,7 +38,7 @@ project: main.o code.o
 	$(CC) -o exe main.o code.o 
 ```
 
-You can run it with the following command:
+You can use the following commands to run it:
 
 ```bash
 make
@@ -47,7 +47,7 @@ make
 <h2>Using CMake for compilation</h2>
 
 Build systems like <i>Make</i> are usualy platform specific.
-You can however use a meta build system like CMake which is platform independent.
+You can, however, use a platform-independent meta build system such as CMake.
 
 Example of CMakeList.txt for our project with three files (main.c code.c code.h):
 
@@ -65,7 +65,7 @@ main.c)
 target_link_libraries(executable code)
 ```
 
-You can run it with the following commands:
+You can use the following commands to run it:
 
 ```bash
 mkdir build
@@ -78,8 +78,7 @@ cmake --build .
 
 Make is a build system.
 CMake is a build system generator.
-You can use CMake to generate Makefiles, but it can also work with Ninja, KDEvelop and Xcode projects, as well as Visual Studio solutions
-
+CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode projects, as well as Visual Studio solutions.
 <h1>CMake language</h1>
 
 <h2>Variables</h2>
@@ -177,7 +176,7 @@ endfunction()
 
 <h1>Requirements</h1>
  
-In order to run our examples you need the following:
+To run our examples, you will need the following:
 
 * CMake v3.15+
 * gcc
@@ -186,9 +185,9 @@ In order to run our examples you need the following:
 <h1>Table of contents</h1>
 
   - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same folder.
-  - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). Project with subdirectories, each with individual CMakeList.txt file.
-  - [Exporting and using packages](https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages). Export your library as a package and then use it in a completely unrelated project.
-  - [OpenCV](https://github.com/djeada/CMake/tree/main/src/OpenCV). Build a program that uses OpenCV library to read an image, write some text to the image and save it.
+  - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). The project is divided into subdirectories, each with its own CMakeList.txt file.
+  - [Exporting and using packages](https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages). Export the library as a package and include it in an entirely unrelated project.
+  - [OpenCV](https://github.com/djeada/CMake/tree/main/src/OpenCV). Create a program that reads an image, writes text to it, and saves it using the OpenCV library.
   - Doxygen with CMake.
   - GTest with CMake.
   - Python with CMake.
