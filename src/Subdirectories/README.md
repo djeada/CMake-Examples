@@ -1,2 +1,2 @@
 
-Project with subdirectories, each with individual CMakeList.txt file.
+The project is divided into subdirectories, each with its own CMakeList.txt file.
