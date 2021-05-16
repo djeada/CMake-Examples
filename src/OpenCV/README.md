@@ -1,6 +1,6 @@
 # Open-CV
 
-Build a program that uses OpenCV library to read an image, write some text to the image and save it.
+Create a program that reads an image, writes text to it, and saves it using the OpenCV library.
 
 <h2>Requirements</h2>
 
