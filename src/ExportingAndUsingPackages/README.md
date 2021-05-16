@@ -1,5 +1,5 @@
 
-<a href="https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages/ExportingPackages">Exporting packages</a> directory contains an example of a library that can be exported as a package.
+ Export the library as a package and include it in an entirely unrelated project.
 
 In order to do so, you need to go that directory and run the following commands:
 
@@ -11,5 +11,5 @@ cmake --build .
 sudo make install
 ```
 
-Now your package has been installed and you can use it in any other project.
-If you wonder how, I would recommend you to take a look at <a href="https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages/UsingPackages">Using Packages</a> directory.
+Your package is now installed and ready to use on some other project.
+If you're wondering how, I suggest you look at the <a href="https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages/UsingPackages">Using Packages</a> directory.
