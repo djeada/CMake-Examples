@@ -79,6 +79,9 @@ cmake --build .
 Make is a build system.
 CMake is a build system generator.
 CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode projects, as well as Visual Studio solutions.
+
+Make will build your project, i.e. it will produce an executable (assuming no errors occur in the process). CMake on the other hand will produce the configuration files for Make or other tool.
+
 <h1>CMake language</h1>
 
 <h2>Variables</h2>
