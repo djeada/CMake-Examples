@@ -82,6 +82,12 @@ CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode pro
 
 Make will build your project, i.e. it will produce an executable (assuming no errors occur in the process). CMake on the other hand will produce the configuration files for Make or other tool.
 
+<h2>CMake Workflow</h2>
+
+1. Edit files in the source tree.
+2. Run cmake to generate or configure native build system files.
+3. Open project files from the build tree and use the native build tools.
+
 <h1>CMake language</h1>
 
 <h2>Variables</h2>
