@@ -90,7 +90,16 @@ Make will build your project, i.e. it will produce an executable (assuming no er
 
 <h1>CMake language</h1>
 
+* All values are strings.
+* Commands are case insensitive.
+* Arguments passed to the commands are case sensitive and space separated.
+* Quoted argument is treated as one value.
+
 <h2>Variables</h2>
+
+* Variable names are case sensitive.
+* You can use alpha-numerics and underscores.
+* You should always initialize a variable with a value.
 
 ```CMake
 set(TEXT "Hello World!")
