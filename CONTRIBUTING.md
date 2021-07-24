@@ -7,7 +7,7 @@ Any and all contributions are appreciated.
   - Run the following git command in a terminal:
 
 ```bash
-git clone https://github.com/djeada/kaggle-house-prices.git
+git clone https://github.com/djeada/CMake.git
 ```
 
 * Navigate to repository directory on your computer.
