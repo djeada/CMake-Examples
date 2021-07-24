@@ -1,5 +1,5 @@
 # CMake
-Examples of projects with CMake.
+Examples of projects with CMake
 
 <h1>Introduction</h1>
 
@@ -11,7 +11,7 @@ CMake is:
 
 <h2>Compilation with gcc</h2>
 
-When your project contains just three files (main.c code.c code.h), you can easily compile it from the terminal using following commands:
+When your project contains just three files (main.c code.c code.h), you can easily compile it from the terminal using the following commands:
 
 ```bash
 gcc -Wall -Wextra -Werror -std=c99 -pedantic -g -o exe code.c main.c
@@ -24,7 +24,7 @@ You have now an executable that you can run, called <i>exe</i>.
 When dealing with a large number of files, using command line commands for compilation becomes almost impossible.
 Instead, you can use configuration files to define which files to compile and with which flags.
 
-Example of Makefile for our project with three files (main.c code.c code.h):
+An example of Makefile for our project with three files (main.c code.c code.h):
 
 ```make
 CC=gcc
@@ -49,7 +49,7 @@ make
 Build systems like <i>Make</i> are usualy platform specific.
 You can, however, use a platform-independent meta build system such as CMake.
 
-Example of CMakeList.txt for our project with three files (main.c code.c code.h):
+An example of CMakeList.txt for our project with three files (main.c code.c code.h):
 
 ```CMake
 cmake_minimum_required(VERSION 3.15.0)
@@ -76,17 +76,15 @@ cmake --build .
 
 <h2>Make vs CMake</h2>
 
-Make is a build system.
-CMake is a build system generator.
-CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode projects, as well as Visual Studio solutions.
+Make is a build system. CMake is a build system generator. CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode projects, as well as Visual Studio solutions.
 
-Make will build your project, i.e. it will produce an executable (assuming no errors occur in the process). CMake on the other hand will produce the configuration files for Make or other tool.
+Make will build your project, i.e. it will produce an executable (assuming no errors occur in the process). CMake, on the other hand, will produce the configuration files for Make or other tool.
 
 <h2>CMake Workflow</h2>
 
 1. Edit files in the source tree.
-2. Run cmake to generate or configure native build system files.
-3. Open project files from the build tree and use the native build tools.
+1. Run cmake to generate or configure native build system files.
+1. Open project files from the build tree and use the native build tools.
 
 <h1>CMake language</h1>
 
