@@ -200,11 +200,11 @@ To run our examples, you will need the following:
 
 <h1>Table of contents</h1>
 
-  - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same folder.
+  - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same directory.
   - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). The project is divided into subdirectories, each with its own CMakeList.txt file.
   - [Exporting and using packages](https://github.com/djeada/CMake/tree/main/src/ExportingAndUsingPackages). Export the library as a package and include it in an entirely unrelated project.
   - [OpenCV](https://github.com/djeada/CMake/tree/main/src/OpenCV). Create a program that reads an image, writes text to it, and saves it using the OpenCV library.
   - [MPI](https://github.com/djeada/CMake/tree/main/src/MPI). Hello world with MPI.
-  - [ClangTidy](https://github.com/djeada/CMake/tree/main/src/ClangTidy). Example on how to integrate clang-tidy with CMake. Clang-tidy will run each time a project is build with CMake.
+  - [ClangTidy](https://github.com/djeada/CMake/tree/main/src/ClangTidy). Example on how to integrate clang-tidy with CMake.
   - [GTest](https://github.com/djeada/CMake/tree/main/src/GTest ). Run google unit tests (GTest) with CMake.
   - Doxygen with CMake.
