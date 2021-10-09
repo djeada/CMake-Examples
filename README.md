@@ -1,5 +1,5 @@
 # CMake
-Examples of projects with CMake
+Examples of projects with CMake.
 
 <h1>Introduction</h1>
 
