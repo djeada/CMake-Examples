@@ -38,11 +38,17 @@ project: main.o code.o
 	$(CC) -o exe main.o code.o 
 ```
 
-You can use the following commands to run it:
+Use the following command to execute it:
 
 ```bash
 make
 ```
+
+*  Make maintains a record of the modifications made to the source files.
+As a result, everytime you execute it, it will only recompile the files that have changed. 
+* Invented at Bell Labs in 1975. It is still one of the most extensively used build managers
+* It has it's own programming language.
+* Many other tools know how to work with it.
 
 <h2>Using CMake for compilation</h2>
 
