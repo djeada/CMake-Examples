@@ -1,7 +1,7 @@
 # CMake
 Examples of projects with CMake.
 
-<h1>Introduction</h1>
+## Introduction
 
 CMake is:
 * cross-platform
@@ -9,7 +9,7 @@ CMake is:
 * open-source
 * compiler-independent
 
-<h2>Compilation with gcc</h2>
+### Compilation with gcc
 
 When your project contains just three files (main.c code.c code.h), you can easily compile it from the terminal using the following commands:
 
@@ -19,7 +19,7 @@ gcc -Wall -Wextra -Werror -std=c99 -pedantic -g -o exe code.c main.c
 
 You have now an executable that you can run, called <i>exe</i>.
 
-<h2>Using Makefiles for compilation</h2>
+### Using Makefiles for compilation
 
 When dealing with a large number of files, using command line commands for compilation becomes almost impossible.
 Instead, you can use configuration files to define which files to compile and with which flags.
@@ -50,7 +50,7 @@ As a result, everytime you execute it, it will only recompile the files that hav
 * It has it's own programming language.
 * Many other tools know how to work with it.
 
-<h2>Using CMake for compilation</h2>
+### Using CMake for compilation
 
 Build systems like <i>Make</i> are usualy platform specific.
 You can, however, use a platform-independent meta build system such as CMake.
@@ -80,26 +80,26 @@ cmake..
 cmake --build .
 ```
 
-<h2>Make vs CMake</h2>
+### Make vs CMake
 
 Make is a build system. CMake is a build system generator. CMake can create Makefiles, but it also works for Ninja, KDEvelop, and Xcode projects, as well as Visual Studio solutions.
 
 Make will build your project, i.e. it will produce an executable (assuming no errors occur in the process). CMake, on the other hand, will produce the configuration files for Make or other tool.
 
-<h2>CMake Workflow</h2>
+### CMake Workflow
 
 1. Edit files in the source tree.
 1. Run cmake to generate or configure native build system files.
 1. Open project files from the build tree and use the native build tools.
 
-<h1>CMake language</h1>
+## CMake language
 
 * All values are strings.
 * Commands are case insensitive.
 * Arguments passed to the commands are case sensitive and space separated.
 * Quoted argument is treated as one value.
 
-<h2>Variables</h2>
+### Variables
 
 * Variable names are case sensitive.
 * You can use alpha-numerics and underscores.
@@ -112,7 +112,7 @@ set(NUMBER 10)
 message("Your text: ${TEXT} Your number: ${NUMBER}")
 ```
 
-<h2>Lists</h2>
+### Lists
 
 Indexed like in every other language: 0...n-1
 
@@ -135,7 +135,7 @@ list(SORT LIST)
 message("First list: ${LIST} Second list: ${LIST2}")
 ```
 
-<h2>Strings</h2>
+### Strings
 
 ```CMake
 set(TEXT "Python boss.")
@@ -152,7 +152,7 @@ string(COMPARE GREATER ${NEW_TEXT} ${TEXT}  flag)
 message("Text: ${TEXT}")
 ```
 
-<h2>Conditionals</h2>
+### Conditionals
 
 ```CMake
 set(FLAG ON)
@@ -164,14 +164,14 @@ else()
 endif()
 ```
 
-<h2>Loops</h2>
+### Loops
 
 ```CMake
  foreach(LETTER a b c)
  	message(${LETTER})
 ```
 
-<h2>Functions</h2>
+### Functions
 
 ```CMake
 function(display NAME)
@@ -196,7 +196,7 @@ endfunction()
 ```
 
 
-<h1>Requirements</h1>
+## Requirements
  
 To run our examples, you will need the following:
 
@@ -204,7 +204,7 @@ To run our examples, you will need the following:
 * gcc
 * make
 
-<h1>Table of contents</h1>
+## Table of contents
 
   - [An executable and libraries](https://github.com/djeada/CMake/tree/main/src/ExecutableAndLibraries). A simple example with three .cpp files and two .h files, all in the same directory.
   - [Subdirectories](https://github.com/djeada/CMake/tree/main/src/Subdirectories). The project is divided into subdirectories, each with its own CMakeList.txt file.
@@ -214,3 +214,11 @@ To run our examples, you will need the following:
   - [ClangTidy](https://github.com/djeada/CMake/tree/main/src/ClangTidy). Example on how to integrate clang-tidy with CMake.
   - [GTest](https://github.com/djeada/CMake/tree/main/src/GTest ). Run google unit tests (GTest) with CMake.
   - Doxygen with CMake.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
