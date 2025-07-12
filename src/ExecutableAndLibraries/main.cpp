@@ -2,8 +2,7 @@
 #include "vector.h"
 #include <iostream>
 
-int main()
-{
+int main() {
 
     Complex c1;
     Complex c2(9, 12);
@@ -33,11 +32,9 @@ int main()
 
     std::cout << "For vectors: A \n"
               << vectorA << "and B \n"
-              << vectorB
-              << "sum: \n"
+              << vectorB << "sum: \n"
               << sum << "difference: \n"
-              << diff
-              << "cross product: \n"
+              << diff << "cross product: \n"
               << crossProd << std::endl;
 
     return 0;

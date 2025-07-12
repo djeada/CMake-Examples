@@ -1,6 +1,12 @@
-cmake_minimum_required(VERSION 2.8) 
+
+cmake_minimum_required(VERSION 2.8)
 PROJECT (Example_OpenCV)
-find_package(OpenCV REQUIRED )
+find_package(OpenCV)
+
+if(NOT OpenCV_FOUND)
+    message(WARNING "OpenCV not found, skipping OpenCV example build.")
+    return()
+endif()
 
 INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/include )
 link_directories( ${CMAKE_BINARY_DIR}/bin)

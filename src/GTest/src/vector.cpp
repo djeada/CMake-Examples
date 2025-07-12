@@ -1,83 +1,118 @@
-#include "vector.h"
+#ifndef VECTOR_CPP
+#define VECTOR_CPP
 
 template <class T> Vector<T>::Vector() : capacity(0), n(0), data(nullptr) {}
 
 template <class T> Vector<T>::Vector(const Vector<T> &v) {
-  n = v.n;
-  capacity = v.capacity;
-  data = new T[n];
-  for (int i = 0; i < n; i++)
-    data[i] = v.data[i];
+    n = v.n;
+    capacity = v.capacity;
+    if (capacity > 0) {
+        data = new T[capacity];
+        for (int i = 0; i < n; i++)
+            data[i] = v.data[i];
+    } else {
+        data = nullptr;
+    }
 }
 
 template <class T> Vector<T> &Vector<T>::operator=(const Vector<T> &v) {
-  delete[] data;
-  n = v.n;
-  capacity = v.capacity;
-  data = new T[capacity];
-
-  for (int i = 0; i < n; i++)
-    data[i] = v.data[i];
-
-  return *this;
+    if (this != &v) {
+        delete[] data;
+        n = v.n;
+        capacity = v.capacity;
+        if (capacity > 0) {
+            data = new T[capacity];
+            for (int i = 0; i < n; i++)
+                data[i] = v.data[i];
+        } else {
+            data = nullptr;
+        }
+    }
+    return *this;
 }
 
-template <class T> Vector<T>::~Vector() { delete[] data; }
+template <class T> Vector<T>::~Vector() {
+    delete[] data;
+}
 
 template <class T> typename Vector<T>::iterator Vector<T>::begin() {
-  return data;
+    return data;
 }
 
 template <class T> typename Vector<T>::iterator Vector<T>::end() {
-  return data + size();
+    return data + size();
 }
 
-template <class T> T &Vector<T>::front() { return data[0]; }
+template <class T> T &Vector<T>::front() {
+    return data[0];
+}
 
-template <class T> T &Vector<T>::back() { return data[n - 1]; }
+template <class T> T &Vector<T>::back() {
+    return data[n - 1];
+}
+
+template <class T> const T &Vector<T>::front() const {
+    return data[0];
+}
+
+template <class T> const T &Vector<T>::back() const {
+    return data[n - 1];
+}
 
 template <class T> void Vector<T>::push_back(const T &v) {
-  if (n >= capacity)
-    reserve(capacity + 5);
-  data[n++] = v;
+    if (n >= capacity) {
+        unsigned int newCapacity = (capacity == 0) ? 1 : capacity * 2;
+        reserve(newCapacity);
+    }
+    data[n++] = v;
 }
 
-template <class T> T Vector<T>::pop_back() { return data[n--]; }
+template <class T> T Vector<T>::pop_back() {
+    if (n > 0) {
+        return data[--n]; // Fix: decrement first, then return
+    }
+    // Should throw exception in real implementation
+    return T();
+}
 
 template <class T> void Vector<T>::reserve(unsigned int newCapacity) {
+    if (newCapacity > capacity) {
+        T *newData = new T[newCapacity];
 
-  T *newData = new T[newCapacity];
-  capacity = newCapacity;
+        for (int i = 0; i < n; i++)
+            newData[i] = data[i];
 
-  if (newCapacity < n)
-    n = newCapacity;
-
-  for (int i = 0; i < n; i++)
-    newData[i] = data[i];
-
-  delete[] data;
-  data = newData;
+        delete[] data;
+        data = newData;
+        capacity = newCapacity;
+    }
 }
 
-template <class T> int Vector<T>::size() { return n; }
+template <class T> int Vector<T>::size() const {
+    return n;
+}
+
+template <class T> bool Vector<T>::empty() const {
+    return n == 0;
+}
 
 template <class T> void Vector<T>::resize(unsigned int newSize) {
-  reserve(newSize);
-  n = newSize;
+    if (newSize > capacity)
+        reserve(newSize);
+    n = newSize;
 }
 
 template <class T> T &Vector<T>::operator[](unsigned int index) {
-  return data[index];
+    return data[index];
+}
+
+template <class T> const T &Vector<T>::operator[](unsigned int index) const {
+    return data[index];
 }
 
 template <class T> void Vector<T>::clear() {
-  capacity = 0;
-  n = 0;
-  delete[] data;
-  data = nullptr;
+    n = 0;
+    // Don't deallocate capacity - this is standard behavior
 }
 
-template class Vector<int>;
-template class Vector<float>;
-template class Vector<double>;
-template class Vector<char>;
+#endif // VECTOR_CPP
