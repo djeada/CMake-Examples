@@ -1,0 +1,25 @@
+name: CMake Examples CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake clang-format build-essential
+
+      - name: Run formatting check
+        run: bash tests/check_format.sh
+
+      - name: Run compilation test
+        run: bash tests/test_compile.sh

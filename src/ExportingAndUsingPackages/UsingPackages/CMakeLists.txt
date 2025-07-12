@@ -2,12 +2,9 @@ cmake_minimum_required(VERSION 3.0.0)
 
 project(MY_PROJECT VERSION 1.0.0)
 
-find_package(complex)
+# Use local complex and vector libraries from ExportingPackages
+add_subdirectory("../ExportingPackages/complex" complex_lib)
+add_subdirectory("../ExportingPackages/vector" vector_lib)
 
-if(my_math_FOUND)
-	message("complex library found")
-	add_executable(exe main.cpp)
-	target_link_libraries(exe complex)	
-else()
-	message(FATAL_ERROR "my_math library not found")
-endif()
+add_executable(exe main.cpp)
+target_link_libraries(exe complex vector)
